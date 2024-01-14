@@ -3,10 +3,10 @@ import {authorSchema} from './author-model.js';
 
 const bookSchema = new mongoose.Schema({
     id: { type: mongoose.Schema.Types.ObjectId },
-    title: { type: String, required: true },
+    title: { type: String, required: [true, 'O atributo título é requerido!'] },
     cover: { type: String },
-    price: { type: Number, required: true },
-    pages: { type: Number, required: true },
+    price: { type: Number, required: [true, 'O atributo preço é requerido!'] },
+    pages: { type: Number, required: [true, 'O atributo páginas é requerido!'] },
     author: authorSchema
 }, {
     versionKey: false
