@@ -1,9 +1,10 @@
-import mongoose from "mongoose";
-import BaseError from "../errors/base-error.js";
-import InvalidRequest from "../errors/invalid-request.js";
-import ValidationError from "../errors/validation-error.js";
-import NotFoundError from "../errors/not-found-error.js";
+import mongoose from 'mongoose';
+import BaseError from '../errors/base-error.js';
+import InvalidRequest from '../errors/invalid-request.js';
+import ValidationError from '../errors/validation-error.js';
+import NotFoundError from '../errors/not-found-error.js';
 
+// eslint-disable-next-line no-unused-vars
 function listenerErrors(error, req, res, next) {
     if (error instanceof mongoose.Error.CastError) {
         new InvalidRequest().sendResponse(res);

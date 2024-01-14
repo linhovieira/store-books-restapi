@@ -1,4 +1,4 @@
-import BaseError from "./base-error.js";
+import BaseError from './base-error.js';
 
 class NotFoundError extends BaseError {
     constructor(message = 'Recurso não encontrado!') {

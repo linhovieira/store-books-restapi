@@ -1,5 +1,5 @@
 import {authorModel} from '../models/author-model.js';
-import NotFoundError from "../errors/not-found-error.js";
+import NotFoundError from '../errors/not-found-error.js';
 
 class AuthorController {
     static async getItems(req, res, next) {
